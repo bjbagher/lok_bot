@@ -1,0 +1,20 @@
+{
+  "name": "lok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:push": "npx prisma db push",
+    "start": "node src/main.js"
+  },
+  "keywords": [],
+  "author": "Bahram Bagher",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "prisma": "^4.0.0"
+  }
+}
