@@ -1,6 +1,25 @@
 # LOK_Bot
 
 # Get Started
+
+## Requirements
+* npm
+* node 
+* sqlite3
+* git
+
+
+## Get repo
+```bash
+git clone https://github.com/bjbagher/lok_bot.git
+cd lok_bot
+```
+  
+## Install Deps
+```bash
+npm install
+```
+
 ## Create DB 
 ```bash
 npm run db:push
