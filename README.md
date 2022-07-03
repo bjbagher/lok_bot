@@ -8,9 +8,9 @@ npm run db:push
 
 ## Modify main
 ```typescript
-const accessToken = <your_token>
-const from = <from_land_id>
-const to = <to_land_id>
+const accessToken =  //<your_token>
+const from = //<from_land_id>
+const to = //<to_land_id>
 ```
 ## Run Main
 ```bash
