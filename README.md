@@ -1,41 +1,54 @@
-# LOK_Bot
-
 # Get Started
 
 ## Requirements
+
 * npm
-* node 
+* node
 * sqlite3
 * git
 
-
 ## Get repo
+
 ```bash
 git clone https://github.com/bjbagher/lok_bot.git
 cd lok_bot
 ```
   
 ## Install Deps
+
 ```bash
 npm install
 ```
 
-## Create/Sync DB 
+## Set Land ID range in src/index.js
+
+```typescript
+export const FROM = 164148;
+export const TO = 164149;
+```
+
+## CSV output
+
+```bash
+npm run start:csv
+```
+
+## DB usage
+
+### Create DB
+
 ```bash
 npm run db:push
 ```
 
-## Modify main
-```typescript
-const accessToken =  //<your_token>
-const from = //<from_land_id>
-const to = //<to_land_id>
-```
-## Run Main
+### Run script
+
 ```bash
-npm start
+npm run start:db
 ```
-## Access DB
+
+### Access DB
+
 ```bash
 sqlite3 prisma/dev.db
 select * from land;

@@ -11,7 +11,9 @@ datasource db {
 }
 
 model Land {
-  id               String @id
+  id               String   @id @default(uuid())
+  landId           String
+  date             DateTime @default(now())
   name             String
   devRank          String
   devPoint         String

@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "db:push": "npx prisma db push",
-    "start": "node src/main.js"
+    "start:csv": "node src/toCSV.js",
+    "start:db": "node src/toDB.js"
   },
   "keywords": [],
   "author": "Bahram Bagher",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.0.0",
+    "csv-stringify": "^6.1.3",
+    "fs": "^0.0.1-security",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
