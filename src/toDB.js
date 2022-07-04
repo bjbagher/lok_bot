@@ -1,5 +1,5 @@
 import { fetchLand, FROM, TO } from "./index.js";
-import { logChunks, transformData } from "./utils.js";
+import { logChunks, transformData, sleep } from "./utils.js";
 import { PrismaClient } from "@prisma/client";
 
 const db = new PrismaClient();
@@ -9,6 +9,7 @@ run();
 async function run() {
   for (let i = FROM; i < TO; i += 1) {
     console.log("landId:", i);
+    await sleep(1000);
     await findLandAndInsertInDB({
       landId: `${i}`,
     });

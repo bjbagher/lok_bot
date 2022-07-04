@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
 export const FROM = 164148;
-export const TO = 164149;
+export const TO = 164169;
 
 export function fetchLand({ landId }) {
   return fetch(

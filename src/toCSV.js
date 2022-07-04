@@ -2,7 +2,7 @@ import { fetchLand, FROM, TO } from "./index.js";
 import { stringify } from "csv-stringify";
 import { join } from "path";
 import fs from "fs";
-import { logChunks, transformData } from "./utils.js";
+import { logChunks, transformData, sleep } from "./utils.js";
 
 const columns = {
   landId: "landId",
@@ -31,6 +31,8 @@ async function run() {
   const data = [];
   for (let i = FROM; i < TO; i += 1) {
     console.log("landId:", i);
+    await sleep(1000);
+
     const values = await parsedForCSV({
       landId: `${i}`,
     });
