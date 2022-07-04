@@ -1,4 +1,7 @@
-# Get Started
+# LOK_BOT
+League of kingdoms data extraction
+
+## Get Started
 
 ## Requirements
 
