@@ -20,7 +20,7 @@ cd lok_bot
 npm install
 ```
 
-## Create DB 
+## Create/Sync DB 
 ```bash
 npm run db:push
 ```
