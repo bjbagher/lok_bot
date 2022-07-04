@@ -35,7 +35,7 @@ npm run start:csv
 
 ## DB usage
 
-### Create DB
+### Create/Sync DB
 
 ```bash
 npm run db:push
