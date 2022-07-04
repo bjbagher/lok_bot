@@ -1,5 +1,5 @@
 import { fetchLand, FROM, TO } from "./index.js";
-import { logChunks, transformData } from "./utils";
+import { logChunks, transformData } from "./utils.js";
 import { PrismaClient } from "@prisma/client";
 
 const db = new PrismaClient();
