@@ -1,7 +1,8 @@
 import fetch from "node-fetch";
 
-export const FROM = 164148;
-export const TO = 164169;
+// FROM can't be 0
+export const FROM = 164108;
+export const TO = 164205;
 
 export function fetchLand({ landId }) {
   return fetch(

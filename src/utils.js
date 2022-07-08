@@ -34,3 +34,10 @@ export function transformData(data) {
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+export function todaysDate() {
+  return `${new Date()
+    .toLocaleString()
+    .split(",")[0]
+    .replaceAll("/", ".")}.csv`;
+}
