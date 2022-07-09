@@ -42,13 +42,18 @@ async function run() {
     } catch (err) {
       console.error(err);
     }
-    data.push(values);
+    if (values.length) {
+      data.push(values);
+    }
   }
 
   if (lastFROM) {
     // resume by appending
     stringify(data, { header: false, columns: columns }, (err, output) => {
-      if (err) throw err;
+      if (err) {
+        console.log("current data", data);
+        throw err;
+      }
       fs.appendFile(join("csv", todaysDate()), output, (err) => {
         if (err) throw err;
         console.log("CSV resuming saved.");
@@ -58,7 +63,10 @@ async function run() {
   //  write new csv
   else
     stringify(data, { header: true, columns: columns }, (err, output) => {
-      if (err) throw err;
+      if (err) {
+        console.log("current data", data);
+        throw err;
+      }
       fs.writeFile(join("csv", todaysDate()), output, (err) => {
         if (err) throw err;
         console.log("CSV saved.");
@@ -68,6 +76,10 @@ async function run() {
 
 function parsedForCSV({ landId }) {
   return fetchLand({ landId }).then(async (response) => {
+    if (response.status != 200) {
+      console.error("got error", response);
+      return [];
+    }
     const result = await logChunks(response.body);
     const parsed = transformData(result);
     const values = Object.values(parsed);
